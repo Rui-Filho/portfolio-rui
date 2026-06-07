@@ -58,7 +58,7 @@ main {
 
     display: grid;
     grid-template-columns: auto 88vw auto;
-    gap: 20px;
+    gap: 10px;
     margin: 15px;
 
 }
@@ -139,7 +139,7 @@ article#video .video-container {
 
 article h2 {
     color: var(--destaque);
-    margin-bottom: 13px;
+    margin-bottom: 25px;
 }
 
 #skill-container {
@@ -175,6 +175,43 @@ article h2 {
     height: 100%;
     background-color: var(--destaque-inverso);
     border-radius: 4px;
+}
+
+#formacao-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+#formacao-container .curso {
+    background-color: var(--fundo-principal);
+    border-radius: 8px;
+    border-left: 5px solid var(--destaque-inverso);
+    padding-left: 15px;
+    transition: border-width 0.5s, border-color 1s;
+}
+
+#formacao-container .curso:hover {
+    border-left-width: 15px;
+    border-color: var(--destaque);
+    cursor: pointer;
+
+}
+
+#formacao-container .periodo {
+    font-size: 0.9 em;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#formacao-container .instituicao {
+    color: var(--destaque-inverso);
+    font-size: 1.1em;
+    transition: color 0.5s;
+}
+
+#formacao-container .instituicao:hover {
+    color: var(--destaque);
 }
 
 @media screen  and (min-width:768px) {

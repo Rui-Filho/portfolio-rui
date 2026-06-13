@@ -31,6 +31,11 @@ header {
     display: flex;
     justify-content: flex-end;
     align-content: center;
+
+    /*Deixando menu fixo*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 nav#menu ul{

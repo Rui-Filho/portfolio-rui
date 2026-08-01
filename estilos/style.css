@@ -6,13 +6,12 @@
 }
 
 :root {
-    --fundo-principal:#E9E6E8 ;
-    --texto: #211924;
-    --texto-inverso: #FAF9F6;
-    --destaque:#755a73 ;
-    --destaque-inverso:#d29ed2 ;
-    --fundo-card: #FAF9F6;
-
+    --fundo-principal: #EEF2F7;
+    --texto: #0F172A;
+    --texto-inverso: #F8FAFC;
+    --destaque: #0EA5E9;
+    --destaque-inverso: #38BDF8;
+    --fundo-card: #FFFFFF;
 }
 
 body.escuro {

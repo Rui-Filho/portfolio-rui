@@ -256,6 +256,11 @@ article h2 {
 
 }
 
+.descricaoLink {
+    text-decoration: none;
+    color: var(--texto);
+}
+
 #projeto-container .foto{
     width: 100%;
     aspect-ratio: 16/9;
@@ -264,6 +269,103 @@ article h2 {
     border-radius: 8px;
 
 }
+
+
+
+
+
+#contatoContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-contato {
+    background-color: var(--fundo-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.10);
+    width: min(500px, 90%);
+}
+
+#form-contato input[type="text"],
+#form-contato input[type="email"],
+#form-contato input[type="tel"],
+#form-contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+    margin-bottom: 15px;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+
+    background-color: var(--fundo-principal);
+    color: var(--texto);
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+#form-contato input[type="text"]:focus,
+#form-contato input[type="email"]:focus,
+#form-contato input[type="tel"]:focus,
+#form-contato textarea:focus {
+    border-color: var(--destaque);
+
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+
+#imensagem {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#form-contato input[type="submit"] {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#form-contato input[type="submit"]:hover {
+    background-color: var(--destaque-inverso);
+    transform: translateY(-2px);
+}
+
+#form-contato input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: var(--destaque);
@@ -341,3 +443,4 @@ footer a:hover {
 
     
 
+}

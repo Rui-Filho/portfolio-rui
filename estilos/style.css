@@ -35,6 +35,195 @@ body {
     
 }
 
+/* testando configurações abaixo */
+
+header {
+    background-color: var(--fundo-principal);
+
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    border-bottom: 1px solid var(--destaque);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* MENU */
+
+nav#menu ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* LINKS */
+
+nav#menu a {
+    text-decoration: none;
+
+    color: var(--texto);
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ÍCONES */
+
+nav#menu a i {
+    font-size: 1.05rem;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+nav#menu a:hover {
+    background-color: var(--destaque);
+
+    color: var(--texto-inverso);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+nav#menu a:hover i {
+    transform: scale(1.12);
+}
+
+
+nav#menu a {
+    position: relative;
+}
+
+
+/* TOOLTIP */
+
+nav#menu a::after {
+    content: attr(aria-label);
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-5px);
+
+    background-color: var(--texto);
+
+    color: var(--fundo-principal);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* MOSTRA O TOOLTIP */
+
+nav#menu a:hover::after {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+nav#menu a::before {
+    content: "";
+
+    position: absolute;
+
+    top: calc(100% + 5px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: 5px solid transparent;
+    border-bottom-color: var(--texto);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+nav#menu a:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* BOTÃO DE TEMA */
+
+#botao-tema {
+    margin-left: 8px;
+
+    border-left: 1px solid var(--destaque);
+
+    padding-left: 14px !important;
+}
+
+/* Fim do teste de configurações */ 
+
+/*
+
 header {
     background-color: var(--destaque);
     color: var(--texto);
@@ -43,7 +232,7 @@ header {
     justify-content: flex-end;
     align-content: center;
 
-    /*Deixando menu fixo*/
+    
     position: sticky;
     top: 0;
     z-index: 999;
@@ -69,6 +258,8 @@ nav#menu a:hover {
     background-color: var(--destaque-inverso);
     color: var(--destaque);
 }
+
+*/
 
 main {
 

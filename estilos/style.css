@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     --fundo-principal: #EEF2F7;
     --texto: #0F172A;
@@ -32,6 +34,10 @@ body {
     background-color: var(--fundo-principal);
     color: var(--texto);
     transition: background-color 0.7s, color 0.6s;
+    overflow-x: hidden;
+    
+    
+    
     
 }
 
@@ -230,58 +236,11 @@ main {
     grid-template-columns: auto 88vw auto;
     gap: 10px;
     margin: 15px;
-
 }
 
-/*
 
-section#ficha {
-    background-color: var(--fundo-card);
-    padding: 20px;
-    border-radius: 8px;
-    grid-column: 2;
-}
 
-section#ficha img{
-    width: 180px;
-    aspect-ratio: 1/1.3.5;
-    object-fit: contain;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 5px solid var(--fundo-card);
-    outline: 5px solid var(--destaque);
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-}
 
-section#ficha h1{
-    color: var(--destaque);
-    margin: 15px 0px;
-    font-size: 1.6em;
-    text-align: left;
-}
-
-div#social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6em;
-    gap: 1em;
-    margin-top: 15px;
-}
-
-div#social a{
-    color: var(--destaque);
-    transition: color 0.5s;
-
-}
-
-div#social a:hover {
-    color: var(--destaque-inverso);
-
-}
-    */
     
 /* Início configuração sobre ficha pessoal */
 
@@ -859,30 +818,51 @@ article h2 {
 
 
 
+/* Footer */
 
-
-
-
-
-
-
-footer {
-    background-color: var(--destaque);
-    color: var(--texto-inverso);
-    text-align: center;
-    padding: 15px;
+footer { 
+    background-color: var(--destaque); 
+    color: var(--texto-inverso); 
+    text-align: center; 
+    padding: 25px 20px; 
+    font-size: 0.85rem;
+    width: 101vw;
 }
 
-footer a{
+footer a { 
     color: var(--texto-inverso);
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
-footer a:hover {
-    color: var(--destaque-inverso);
-
+footer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: var(--texto-inverso);
+    transition: width 0.3s ease;
 }
+
+footer a:hover::after {
+    width: 100%;
+}
+
+footer a:hover { 
+    color: var(--texto-inverso);
+}
+
+
+
+
+
+
+
+
+
 
 
 
